@@ -3,15 +3,21 @@
     "ignore": [
         ".git",
         ".svn",
+        "src/logs/*",
+        "src/**/*.{spec,test}.ts",
         "node_modules/**/node_modules"
     ],
     "verbose": true,
     "execMap": {
         "js": "node --harmony"
     },
-    "watch": [],
+    "watch": [
+        "src",
+        ".env"
+    ],
     "env": {
         "NODE_ENV": "development"
     },
+    "exec": "ts-node -r tsconfig-paths/register --transpile-only src/server.ts",
     "ext": "js json njk css js "
 }

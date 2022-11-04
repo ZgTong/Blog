@@ -24,6 +24,11 @@
       "baseUrl": "src",
       "paths": {
         "@/*": ["*"],
+        "@config": ["config"],
+        "@routes/*": ["routes/*"],
+        "@utils/*": ["utils/*"],
+        "@interfaces/*": ["interfaces/*"],
+        "@controllers/*": ["controllers/*"],
       }
     },
     "include": ["src/**/*.ts", "src/**/*.json", ".env"],
