@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "/home/zuguang/Desktop/work/myProject/Blog/BlogServer/src/logs/debug/.846b0dfb565d6816ededdda9a057da22cf710977-audit.json",
+    "files": [
+        {
+            "date": 1667795065458,
+            "name": "/home/zuguang/Desktop/work/myProject/Blog/BlogServer/src/logs/debug/2022-11-07.log",
+            "hash": "d3cd172f174424be0ad55f1ac9cd3568480c3bd7238da59b6038235f91efb24b"
+        }
+    ],
+    "hashType": "sha256"
+}

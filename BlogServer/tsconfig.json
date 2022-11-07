@@ -27,8 +27,12 @@
         "@config": ["config"],
         "@routes/*": ["routes/*"],
         "@utils/*": ["utils/*"],
+        "@models/*": ["models/*"],
+        "@exceptions/*": ["exceptions/*"],
         "@interfaces/*": ["interfaces/*"],
         "@controllers/*": ["controllers/*"],
+        "@middlewares/*": ["middlewares/*"],
+        "@constants/*": ["constants/*"],
       }
     },
     "include": ["src/**/*.ts", "src/**/*.json", ".env"],
