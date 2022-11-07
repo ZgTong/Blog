@@ -12,5 +12,4 @@ function commonRes(res: Response, data: unknown, options?: ResOption) {
     const { type, status, message } = options
     let resStatus = status
     if(!resStatus) resStatus = type === Code[200] ? 200 : 409
-
 }
