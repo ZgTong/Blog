@@ -2,5 +2,6 @@
 BlogServer/node_modules
 BlogServer/yarn.lock
 BlogServer/package-lock.json
+BlogServer/src/logs
 
 # blogclient

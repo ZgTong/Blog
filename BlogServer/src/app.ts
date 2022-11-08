@@ -1,6 +1,7 @@
 import express from "express";
 import { NODE_ENV, PORT } from "@config";
 import { Routes } from "@interfaces/routes.interface";
+import responseHeader from "@middlewares/responseHeader.middleware";
 import errorMiddleware from "@middlewares/error.middleware";
 import { logger, stream } from "@utils/logger";
 
@@ -41,7 +42,9 @@ class App {
     }
 
     private initializeMiddlewares() {
-        
+        this.app.use(express.json());
+        this.app.use(express.urlencoded({ extended: true }));
+        this.app.use(responseHeader);
     }
 }
 
