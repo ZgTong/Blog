@@ -1,12 +1,12 @@
 import mongoose from "mongoose";
 
 export interface UserDocument extends mongoose.Document {
-    name: string
-    password: string
-    account: string
-    createdAt: Date
-    updatedAt: Date
-    deletedAt: Date
+    name: string;
+    password: string;
+    account: string;
+    createdAt: Date;
+    updatedAt: Date;
+    deletedAt: Date;
 }
 
 const userSchema = new mongoose.Schema(
@@ -17,5 +17,11 @@ const userSchema = new mongoose.Schema(
     },
     {
         timestamps: true,
-    }
-)
+    },
+);
+
+userSchema.index({ account: 1, deleteAt: 1 }, { unique: true });
+
+const UserModel = mongoose.model<UserDocument>("User", userSchema);
+
+export default UserModel;
