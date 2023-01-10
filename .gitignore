@@ -1,5 +1,5 @@
 # all child projects
-**/
+/**/
     node_modules
     build
     yarn.lock
