@@ -28,6 +28,7 @@
         "@routes/*": ["routes/*"],
         "@utils/*": ["utils/*"],
         "@models/*": ["models/*"],
+        "@services/*": ["services/*"],
         "@schemas/*": ["schemas/*"],
         "@exceptions/*": ["exceptions/*"],
         "@interfaces/*": ["interfaces/*"],
