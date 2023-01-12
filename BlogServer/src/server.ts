@@ -1,6 +1,6 @@
 import App from "@/app";
-import IndexRoute from "@routes/index.route";
+import router from "@routes/index";
 
-const app = new App([new IndexRoute()]);
+const app = new App(router);
 
 app.listen();

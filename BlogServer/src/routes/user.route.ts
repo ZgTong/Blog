@@ -1,10 +1,22 @@
 import { Router } from 'express';
-import { createUserHandler } from '@controllers/user.controller';
+import { Routes } from '@interfaces/routes.interface';
+import UserController from '@controllers/user.controller';
 import { createUserSchema } from "@schemas/user.schema";
 import validate from '@middlewares/validate.middleware';
+// userRouter.post('/user/create', validate(createUserSchema), createUserHandler)
 
-const userRouter = Router();
+class UserRoute implements Routes {
+    public path = '/user';
+    public router = Router();
+    public userController = new UserController();
 
-userRouter.post('/user/create', validate(createUserSchema), createUserHandler)
+    constructor() {
+        this.initializeRoutes();
+    }
 
-export default userRouter;
+    private initializeRoutes() {
+        this.router.post(`${this.path}`, validate(createUserSchema), this.userController.createUser);
+    }
+}
+
+export default UserRoute;
