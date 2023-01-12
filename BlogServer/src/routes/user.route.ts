@@ -15,7 +15,7 @@ class UserRoute implements Routes {
     }
 
     private initializeRoutes() {
-        this.router.post(`${this.path}`, validate(createUserSchema), this.userController.createUser);
+        this.router.post(`${this.path}`, validate(createUserSchema), this.userController.createUser); 
     }
 }
 
